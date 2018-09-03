@@ -1,5 +1,18 @@
-﻿namespace Simcorp.IMS.Phone.Screen{
+﻿using System;
+
+namespace Simcorp.IMS.Phone.Screen{
     public class RetinaScreen : ColourfulScreen {
+        private int vPixelDencity;
+        public override int PixelDencity {
+            get { return vPixelDencity; }
+            protected set {
+                if (value <= 300) { throw new ArgumentOutOfRangeException("Pixel dencity cannot be less or equal to zero."); }
+                vPixelDencity = value;
+            }
+        }
+
+        public RetinaScreen(int vertRes, int horRes, int pixelDencity) : base(vertRes, horRes, pixelDencity) { }
+
         public override void Show(IScreenable screenImage) {
             //here logic that draws monochrome image can be added
         }
@@ -8,7 +21,7 @@
         }
 
         public override string ToString() {
-            return "Retina Screen";
+            return this.ScreenDescription("Retina screen");
         }
 
     }

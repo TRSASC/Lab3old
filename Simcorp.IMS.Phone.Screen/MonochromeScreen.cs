@@ -2,12 +2,14 @@
 {
     public class MonochromeScreen : BaseScreen
     {
+        public MonochromeScreen(int vertRes, int horRes, int pixelDencity) : base(vertRes, horRes, pixelDencity) { }
+
         public override void Show(IScreenable screenImage) {
             //here logic that draws monochrome image can be added
         }
 
         public override string ToString() {
-            return "Monochrome Screen";
+            return this.ScreenDescription("Monochrome screen");
         }
 
     }

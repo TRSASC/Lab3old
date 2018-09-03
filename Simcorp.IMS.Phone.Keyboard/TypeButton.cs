@@ -1,4 +1,4 @@
-﻿namespace Simcorp.IMS.Phone.Button {
+﻿namespace Simcorp.IMS.Phone.Keyboard {
     public class TypeButton : BaseButton {
         string typechar;
 

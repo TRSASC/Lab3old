@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using Simcorp.IMS.Phone.Battery;
-using Simcorp.IMS.Phone.Dynamic;
+using Simcorp.IMS.Phone.Speaker;
 using Simcorp.IMS.Phone.Keyboard;
 using Simcorp.IMS.Phone.Microphone;
 using Simcorp.IMS.Phone.Screen;
@@ -11,7 +11,7 @@ namespace Simcorp.IMS.Phone {
     public class SimCorpMobile : BaseMobile {
         private string vModelName;
         private LiIonBattery vBattery;
-        private StereoDynamic vDynamic;
+        private StereoSpeakerSystem vSpeaker;
         private TouchScreenKeyboard vKeyBoard;
         private MobileMicrophone vMicrophone;
         private OLEDScreen vScreen;
@@ -20,7 +20,7 @@ namespace Simcorp.IMS.Phone {
         private VideoCamera vFrontalCamera;
 
         public override BaseBattery Battery { get { return vBattery; } }
-        public override BaseDynamic Dynamic { get { return vDynamic; } }
+        public override BaseSpeakerSystem Speaker { get { return vSpeaker; } }
         public override BaseKeyboard KeyBoard { get { return vKeyBoard; } }
         public override BaseMicrophone Microphone { get { return vMicrophone; } }
         public override string ModelName { get { return vModelName; } }
@@ -42,11 +42,11 @@ namespace Simcorp.IMS.Phone {
         public SimCorpMobile() {
             vModelName = "SimCorp Mobile";
             vBattery = new LiIonBattery(3000);
-            vDynamic = new StereoDynamic(5, 0);
+            vSpeaker = new StereoSpeakerSystem(new RealSpeaker(2), new RealSpeaker(2), 40);
             vKeyBoard = new TouchScreenKeyboard();
             vMicrophone = new MobileMicrophone();
-            vSimCard = new DualSimCardSlot(new MicroSimCard(), new NanoSimCard());
-            vScreen = new OLEDScreen();
+            vSimCard = new DualSimCardSlot(SimCardTypes.MicroSimCard, SimCardTypes.NanoSimCard);
+            vScreen = new OLEDScreen(1280, 720, 280);
             vMainCamera = new VideoCamera("Main", 13, true, true);
             vFrontalCamera = new VideoCamera("Frontal", 5, true, true);
         }

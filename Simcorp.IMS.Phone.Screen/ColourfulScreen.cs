@@ -2,6 +2,8 @@
     public class ColourfulScreen : BaseScreen {
         int brightness;
 
+        public ColourfulScreen(int vertRes, int horRes, int pixelDencity) : base(vertRes, horRes, pixelDencity) { }
+
         public virtual int Brightness {
             get { return brightness; }
             set { brightness = value; }
@@ -15,7 +17,7 @@
         }
 
         public override string ToString() {
-            return "Colorful Screen";
+            return this.ScreenDescription("Colourful screen");
         }
 
     }

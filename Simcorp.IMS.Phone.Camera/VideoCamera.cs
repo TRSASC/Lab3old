@@ -7,7 +7,7 @@
         }
 
         public override string ToString() {
-            return Desc + " video camera: " + this.Quality + " Mpx";
+            return Desc + " video camera: " + this.Resolution + " Mpx";
         }
     }
 }

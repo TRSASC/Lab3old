@@ -17,9 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Camera", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Keyboard", "Simcorp.IMS.Phone.Keyboard\Simcorp.IMS.Phone.Keyboard.csproj", "{90572F46-E1C1-4755-AAE4-AE4A4A89B1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Button", "Simcorp.IMS.Phone.Button\Simcorp.IMS.Phone.Button.csproj", "{D5A293A5-C23D-4D63-AC33-25EA607D28C8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Dynamic", "Simcorp.IMS.Phone.Dynamic\Simcorp.IMS.Phone.Dynamic.csproj", "{9B2C3C46-2D9A-48D0-8E27-C9814DDD939F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Speaker", "Simcorp.IMS.Phone.Dynamic\Simcorp.IMS.Phone.Speaker.csproj", "{9B2C3C46-2D9A-48D0-8E27-C9814DDD939F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone", "Simcorp.IMS.Phone\Simcorp.IMS.Phone.csproj", "{22F79A80-FC00-4892-85FB-A5598D1B58B4}"
 EndProject
@@ -57,10 +55,6 @@ Global
 		{90572F46-E1C1-4755-AAE4-AE4A4A89B1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90572F46-E1C1-4755-AAE4-AE4A4A89B1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90572F46-E1C1-4755-AAE4-AE4A4A89B1AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5A293A5-C23D-4D63-AC33-25EA607D28C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5A293A5-C23D-4D63-AC33-25EA607D28C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5A293A5-C23D-4D63-AC33-25EA607D28C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5A293A5-C23D-4D63-AC33-25EA607D28C8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9B2C3C46-2D9A-48D0-8E27-C9814DDD939F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9B2C3C46-2D9A-48D0-8E27-C9814DDD939F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B2C3C46-2D9A-48D0-8E27-C9814DDD939F}.Release|Any CPU.ActiveCfg = Release|Any CPU

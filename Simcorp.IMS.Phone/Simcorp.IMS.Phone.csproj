@@ -49,17 +49,13 @@
       <Project>{e475a055-1017-4244-9c14-7ad445c3563e}</Project>
       <Name>Simcorp.IMS.Phone.Battery</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Simcorp.IMS.Phone.Button\Simcorp.IMS.Phone.Button.csproj">
-      <Project>{d5a293a5-c23d-4d63-ac33-25ea607d28c8}</Project>
-      <Name>Simcorp.IMS.Phone.Button</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Simcorp.IMS.Phone.Camera\Simcorp.IMS.Phone.Camera.csproj">
       <Project>{36ef41cf-ebfa-4ca3-a35f-0f81a76ac557}</Project>
       <Name>Simcorp.IMS.Phone.Camera</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Simcorp.IMS.Phone.Dynamic\Simcorp.IMS.Phone.Dynamic.csproj">
+    <ProjectReference Include="..\Simcorp.IMS.Phone.Dynamic\Simcorp.IMS.Phone.Speaker.csproj">
       <Project>{9b2c3c46-2d9a-48d0-8e27-c9814ddd939f}</Project>
-      <Name>Simcorp.IMS.Phone.Dynamic</Name>
+      <Name>Simcorp.IMS.Phone.Speaker</Name>
     </ProjectReference>
     <ProjectReference Include="..\Simcorp.IMS.Phone.Keyboard\Simcorp.IMS.Phone.Keyboard.csproj">
       <Project>{90572f46-e1c1-4755-aae4-ae4a4a89b1ae}</Project>

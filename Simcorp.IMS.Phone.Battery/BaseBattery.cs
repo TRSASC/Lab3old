@@ -2,16 +2,16 @@
 
 namespace Simcorp.IMS.Phone.Battery {
     public abstract class BaseBattery {
-        private double vVolume;
+        private double vCapacity;
         private double vChargeLevel;
 
-        public double Volume {
+        public double Capacity {
             get {
-                return vVolume;
+                return vCapacity;
             }
             private set {
-                if (value <= 0) {throw new ArgumentOutOfRangeException("Battery volume must be positive"); }
-                vVolume = value;
+                if (value <= 0) {throw new ArgumentOutOfRangeException("Battery capacity must be positive"); }
+                vCapacity = value;
             }
         }
 
@@ -19,7 +19,7 @@ namespace Simcorp.IMS.Phone.Battery {
             get {
                 return (int)vChargeLevel;
             }
-            private set {
+            protected set {
                 if (value < 0){
                     value = 0;
                 }
@@ -31,20 +31,14 @@ namespace Simcorp.IMS.Phone.Battery {
         }
 
         public BaseBattery(double vol){
-            Volume = vol;
+            Capacity = vol;
         }
 
-        public void Charge(double energy) {
-            if (this.ChargeLevel + energy < this.Volume) {
-                this.ChargeLevel += energy;
-            }
-            else {
-                Console.WriteLine("Battery is charged");
-            }
-        }
+        public abstract void Charge(double energy);
 
         public void GiveCharge(double energy) {
             if (this.ChargeLevel - energy < 0) {
+               
                 ChargeLevel -= energy;
             }
             else {

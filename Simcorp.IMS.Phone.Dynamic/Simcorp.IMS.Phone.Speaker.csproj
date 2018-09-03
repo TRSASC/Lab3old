@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseDynamic.cs" />
+    <Compile Include="BaseSpeaker.cs" />
+    <Compile Include="BaseSpeakerSystem.cs" />
     <Compile Include="IReproduceSound.cs" />
-    <Compile Include="MonauralDynamic.cs" />
+    <Compile Include="MonauralSpeakerSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StereoDynamic.cs" />
+    <Compile Include="RealSpeaker.cs" />
+    <Compile Include="StereoSpeakerSystem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

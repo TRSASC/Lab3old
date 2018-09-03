@@ -1,4 +1,4 @@
-﻿namespace Simcorp.IMS.Phone.Button {
+﻿namespace Simcorp.IMS.Phone.Keyboard {
     public class Backspace : BaseButton {
         public Backspace(string title) {
             desc = title;
@@ -8,3 +8,4 @@
         }
     }
 }
+

@@ -1,4 +1,4 @@
-﻿namespace Simcorp.IMS.Phone.Button {
+﻿namespace Simcorp.IMS.Phone.Keyboard {
     abstract public class BaseButton {
         protected string desc;
 

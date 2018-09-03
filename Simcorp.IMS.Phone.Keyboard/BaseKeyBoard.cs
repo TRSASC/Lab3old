@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Simcorp.IMS.Phone.Button;
 
 namespace Simcorp.IMS.Phone.Keyboard
 {

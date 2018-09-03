@@ -1,6 +1,6 @@
-﻿namespace Simcorp.IMS.Phone.Dynamic {
+﻿namespace Simcorp.IMS.Phone.Speaker {
     public interface IReproduceSound {
-        double Quality { get; set; }
+        double Bitrate { get; set; }
         void GiveSound();
     }
 }

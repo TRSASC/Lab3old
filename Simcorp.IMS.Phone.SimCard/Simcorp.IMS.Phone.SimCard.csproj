@@ -42,12 +42,10 @@
   <ItemGroup>
     <Compile Include="BaseSimCard.cs" />
     <Compile Include="BaseSimCardSlot.cs" />
+    <Compile Include="SimCardTypes.cs" />
     <Compile Include="DualSimCardSlot.cs" />
-    <Compile Include="MicroSimCard.cs" />
-    <Compile Include="MiniSimCard.cs" />
-    <Compile Include="NanoSimCard.cs" />
     <Compile Include="OneSimCardSlot.cs" />
-    <Compile Include="StandardSimCard.cs" />
+    <Compile Include="RealSimCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

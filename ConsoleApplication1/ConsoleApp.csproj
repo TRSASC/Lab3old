@@ -52,6 +52,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Simcorp.IMS.Phone\Simcorp.IMS.Phone.csproj">
+      <Project>{22f79a80-fc00-4892-85fb-a5598d1b58b4}</Project>
+      <Name>Simcorp.IMS.Phone</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
