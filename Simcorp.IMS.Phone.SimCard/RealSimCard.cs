@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Simcorp.IMS.Phone.SimCard {
+﻿namespace Simcorp.IMS.Phone.SimCard {
     public class RealSimCard : BaseSimCard {
         public RealSimCard(SimCardTypes sctype) : base(sctype) { }
 

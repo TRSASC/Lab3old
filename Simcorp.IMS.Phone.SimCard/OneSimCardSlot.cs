@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Simcorp.IMS.Phone.SimCard {
+﻿namespace Simcorp.IMS.Phone.SimCard {
     public class OneSimCardSlot :BaseSimCardSlot {
         public OneSimCardSlot(SimCardTypes simCardType1) : base(simCardType1) {}
 
@@ -10,7 +8,7 @@ namespace Simcorp.IMS.Phone.SimCard {
 
         public override string ToString()
         {
-            return "Single SimCard with type: " + SimCardType1.ToString();
+            return "Single SimCard with type " + SimCardType1.ToString();
         }
     }
 }

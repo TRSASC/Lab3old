@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Simcorp.IMS.Phone.SimCard {
+﻿namespace Simcorp.IMS.Phone.SimCard {
     public abstract class BaseSimCardSlot {
         private SimCardTypes vSimCardType1;
         private BaseSimCard vSimCard1;

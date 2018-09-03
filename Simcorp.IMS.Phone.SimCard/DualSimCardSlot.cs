@@ -25,7 +25,7 @@ namespace Simcorp.IMS.Phone.SimCard {
         }
 
         public override string ToString() {
-            return "Dual SimCard with types: " + SimCardType1.ToString() + " and " + SimCardType2.ToString();
+            return "Dual SimCard with types " + SimCardType1.ToString() + " and " + SimCardType2.ToString();
         }
     }
 }
