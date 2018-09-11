@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Simcorp.IMS.Phone.Battery {
-    public class LiPolBattery : BaseBattery {
+    public class LiPolBattery : BaseBattery, ICharge, IGiveCharge {
         public LiPolBattery(double vol) : base(vol) {}
 
         public override void Charge(double energy) {

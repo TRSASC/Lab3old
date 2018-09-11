@@ -1,5 +1,5 @@
 ﻿namespace Simcorp.IMS.Phone.Camera {
-    public class PhotoCamera : BaseCamera {
+    public class PhotoCamera : BaseCamera, IPhotable {
         public PhotoCamera(string desc, double quality, bool flash, bool autoFocus) : base(desc, quality, flash, autoFocus) {}
 
         public override string ToString() {

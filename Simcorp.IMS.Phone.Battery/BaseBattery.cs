@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Simcorp.IMS.Phone.Battery {
-    public abstract class BaseBattery {
+    public abstract class BaseBattery : ICharge, IGiveCharge {
         private double vCapacity;
         private double vChargeLevel;
 

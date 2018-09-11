@@ -1,7 +1,6 @@
 ﻿namespace Simcorp.IMS.Phone.Screen
 {
-    public class MonochromeScreen : BaseScreen
-    {
+    public class MonochromeScreen : BaseScreen, IShowImage {
         public MonochromeScreen(int vertRes, int horRes, int pixelDencity) : base(vertRes, horRes, pixelDencity) { }
 
         public override void Show(IScreenable screenImage) {

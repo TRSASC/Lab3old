@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Simcorp.IMS.Phone.Battery {
-    public class LiIonBattery : BaseBattery {
+    public class LiIonBattery : BaseBattery, ICharge, IGiveCharge {
         public LiIonBattery(double vol) : base(vol){}
 
         public override void Charge(double energy) {
@@ -13,7 +13,6 @@ namespace Simcorp.IMS.Phone.Battery {
                 Console.WriteLine("Battery is charged");
             }
         }
-
 
         public override string ToString() {
             return "Lithium-ion battery: " + this.Capacity + " mAh";

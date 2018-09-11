@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Simcorp.IMS.Phone.Screen{
-    public class RetinaScreen : ColourfulScreen {
+    public class RetinaScreen : ColourfulScreen, IShowImage, IShowImageBright {
         private int vPixelDencity;
         public override int PixelDencity {
             get { return vPixelDencity; }

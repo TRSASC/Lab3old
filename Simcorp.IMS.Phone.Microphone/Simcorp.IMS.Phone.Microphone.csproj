@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BaseMicrophone.cs" />
     <Compile Include="IFetchSound.cs" />
+    <Compile Include="ISound.cs" />
     <Compile Include="MobileMicrophone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

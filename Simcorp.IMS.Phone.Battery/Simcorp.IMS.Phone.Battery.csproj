@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseBattery.cs" />
+    <Compile Include="ICharge.cs" />
+    <Compile Include="IGiveCharge.cs" />
     <Compile Include="LiIonBattery.cs" />
     <Compile Include="LiPolBattery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

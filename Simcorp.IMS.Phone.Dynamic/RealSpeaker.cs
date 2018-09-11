@@ -5,7 +5,7 @@ namespace Simcorp.IMS.Phone.Speaker
     {
         public RealSpeaker(double maxpower) : base(maxpower) { }
 
-        public override void ReproduceSound(IReproduceSound sound) {
+        public override void Play(ISoundable sound) {
             ///Some code to reproduce sound
         }
 

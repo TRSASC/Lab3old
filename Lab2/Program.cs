@@ -13,4 +13,3 @@ namespace Simcorp.IMS.Phone {
         }
     }
 }
-

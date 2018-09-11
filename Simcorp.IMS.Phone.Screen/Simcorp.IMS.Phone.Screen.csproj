@@ -43,6 +43,8 @@
     <Compile Include="BaseScreen.cs" />
     <Compile Include="ColourfulScreen.cs" />
     <Compile Include="IScreenable.cs" />
+    <Compile Include="IShowImage.cs" />
+    <Compile Include="IShowImageBright.cs" />
     <Compile Include="MonochromeScreen.cs" />
     <Compile Include="OLEDScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

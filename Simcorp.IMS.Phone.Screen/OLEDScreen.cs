@@ -1,6 +1,5 @@
 ﻿namespace Simcorp.IMS.Phone.Screen {
-    public class OLEDScreen : ColourfulScreen
-    {
+    public class OLEDScreen : ColourfulScreen, IShowImage, IShowImageBright {
         public OLEDScreen(int vertRes, int horRes, int pixelDencity) : base(vertRes, horRes, pixelDencity) { }
 
         public override void Show(IScreenable screenImage)

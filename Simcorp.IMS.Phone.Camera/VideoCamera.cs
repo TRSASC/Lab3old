@@ -1,5 +1,5 @@
 ﻿namespace Simcorp.IMS.Phone.Camera {
-    public class VideoCamera : PhotoCamera {
+    public class VideoCamera : PhotoCamera, IPhotable, IVideable {
         public VideoCamera(string desc, double quality, bool flash, bool autoFocus) : base(desc, quality, flash, autoFocus) {}
 
         public void MakeVideo(IView view) {

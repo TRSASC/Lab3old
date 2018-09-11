@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Simcorp.IMS.Phone.Camera {
-    public abstract class BaseCamera {
+    public abstract class BaseCamera : IPhotable {
         private double vResolution;
         private bool vFlash;
         private bool vAutoFocus;

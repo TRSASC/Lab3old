@@ -1,5 +1,5 @@
 ﻿namespace Simcorp.IMS.Phone.Speaker {
-    public interface IReproduceSound {
+    public interface ISoundable {
         double Bitrate { get; set; }
         void GiveSound();
     }

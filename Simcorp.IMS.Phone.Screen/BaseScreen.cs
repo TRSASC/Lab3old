@@ -2,7 +2,7 @@
 using System.Text;
 
 namespace Simcorp.IMS.Phone.Screen {
-    public abstract class BaseScreen {
+    public abstract class BaseScreen :IShowImage {
         private double vDiagonal;
         private int vPixelDencity;
         private int vHorizontalResolution;

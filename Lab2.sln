@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApplication1\ConsoleApp.csproj", "{C36C38AC-3D03-44AA-9D1B-167E2A6EE245}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Microphone", "Simcorp.IMS.Phone.Microphone\Simcorp.IMS.Phone.Microphone.csproj", "{8A625C10-3C2C-4936-BE66-06BFA0E9C059}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Screen", "Simcorp.IMS.Phone.Screen\Simcorp.IMS.Phone.Screen.csproj", "{0D3FCE04-57BD-4FEE-88C5-1233516DD2F5}"
@@ -21,16 +19,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Speaker",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone", "Simcorp.IMS.Phone\Simcorp.IMS.Phone.csproj", "{22F79A80-FC00-4892-85FB-A5598D1B58B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "Lab2\Lab2.csproj", "{FEF8A11B-4C80-4CC5-820D-D6D9F60A8D19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C36C38AC-3D03-44AA-9D1B-167E2A6EE245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C36C38AC-3D03-44AA-9D1B-167E2A6EE245}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C36C38AC-3D03-44AA-9D1B-167E2A6EE245}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C36C38AC-3D03-44AA-9D1B-167E2A6EE245}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A625C10-3C2C-4936-BE66-06BFA0E9C059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A625C10-3C2C-4936-BE66-06BFA0E9C059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A625C10-3C2C-4936-BE66-06BFA0E9C059}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{22F79A80-FC00-4892-85FB-A5598D1B58B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22F79A80-FC00-4892-85FB-A5598D1B58B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22F79A80-FC00-4892-85FB-A5598D1B58B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF8A11B-4C80-4CC5-820D-D6D9F60A8D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF8A11B-4C80-4CC5-820D-D6D9F60A8D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF8A11B-4C80-4CC5-820D-D6D9F60A8D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF8A11B-4C80-4CC5-820D-D6D9F60A8D19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

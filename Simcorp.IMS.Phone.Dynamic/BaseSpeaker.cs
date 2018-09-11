@@ -8,6 +8,6 @@
             Power = maxpower;
         }
         
-        public abstract void ReproduceSound(IReproduceSound sound);
+        public abstract void Play(ISoundable sound);
     }
 }

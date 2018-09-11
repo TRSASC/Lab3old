@@ -1,11 +1,11 @@
 ﻿namespace Simcorp.IMS.Phone.Speaker
 {
-    public abstract class BaseSpeakerSystem
+    public abstract class BaseSpeakerSystem : IPlay
     {
         private int vCurvolume;
         private BaseSpeaker vSpeaker1;
 
-        public int CurVolume {
+        public virtual int CurVolume {
             get { return vCurvolume; }
             protected set {
                 if (value > 100) { value = 100; }
@@ -29,7 +29,6 @@
             CurVolume += changevolume;
         }
 
-        public abstract void ReproduceSound(IReproduceSound sound);
-        public abstract void ReproduceSound(IReproduceSound sound1, IReproduceSound sound2); ///In case of stereo sound
+        public abstract void Play(ISoundable sound);
     }
 }

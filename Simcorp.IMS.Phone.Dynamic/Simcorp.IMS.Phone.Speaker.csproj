@@ -42,11 +42,17 @@
   <ItemGroup>
     <Compile Include="BaseSpeaker.cs" />
     <Compile Include="BaseSpeakerSystem.cs" />
-    <Compile Include="IReproduceSound.cs" />
+    <Compile Include="BaseTwoSpeakersSystem.cs" />
+    <Compile Include="ExternalSpeaker.cs" />
+    <Compile Include="IPlay.cs" />
+    <Compile Include="ISoundable.cs" />
     <Compile Include="MonauralSpeakerSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RealSpeaker.cs" />
+    <Compile Include="SamsungHeadset.cs" />
     <Compile Include="StereoSpeakerSystem.cs" />
+    <Compile Include="Track.cs" />
+    <Compile Include="UnofficialHeadset.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

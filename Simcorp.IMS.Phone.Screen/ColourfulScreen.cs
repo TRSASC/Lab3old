@@ -1,5 +1,5 @@
 ﻿namespace Simcorp.IMS.Phone.Screen {
-    public class ColourfulScreen : BaseScreen {
+    public class ColourfulScreen : BaseScreen, IShowImage, IShowImageBright {
         int brightness;
 
         public ColourfulScreen(int vertRes, int horRes, int pixelDencity) : base(vertRes, horRes, pixelDencity) { }

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using Simcorp.IMS.Phone.Battery;
 using Simcorp.IMS.Phone.Speaker;
 using Simcorp.IMS.Phone.Keyboard;
@@ -10,7 +11,7 @@ using Simcorp.IMS.Phone.Camera;
 namespace Simcorp.IMS.Phone {
     public class SimCorpMobile : BaseMobile {
         private string vModelName;
-        private LiIonBattery vBattery;
+        private BaseBattery vBattery;
         private StereoSpeakerSystem vSpeaker;
         private TouchScreenKeyboard vKeyBoard;
         private MobileMicrophone vMicrophone;
@@ -18,6 +19,7 @@ namespace Simcorp.IMS.Phone {
         private DualSimCardSlot vSimCard;
         private VideoCamera vMainCamera;
         private VideoCamera vFrontalCamera;
+        private string speakerSystemName;
 
         public override BaseBattery Battery { get { return vBattery; } }
         public override BaseSpeakerSystem Speaker { get { return vSpeaker; } }
@@ -43,6 +45,7 @@ namespace Simcorp.IMS.Phone {
             vModelName = "SimCorp Mobile";
             vBattery = new LiIonBattery(3000);
             vSpeaker = new StereoSpeakerSystem(new RealSpeaker(2), new RealSpeaker(2), 40);
+            speakerSystemName = nameof(StereoSpeakerSystem);
             vKeyBoard = new TouchScreenKeyboard();
             vMicrophone = new MobileMicrophone();
             vSimCard = new DualSimCardSlot(SimCardTypes.MicroSimCard, SimCardTypes.NanoSimCard);
@@ -57,6 +60,40 @@ namespace Simcorp.IMS.Phone {
             descriptionBuilder.AppendLine($"{MainCamera.ToString()}");
             descriptionBuilder.AppendLine($"{FrontalCamera.ToString()}");
             return descriptionBuilder.ToString();
+        }
+
+        private IPlay PlaybackDevice { get; set; }
+        public void SetPlaybackDevice() {
+            string playbackDeviceName;
+            Console.Write("Select playback device:\n1 - Phone speakers\n2 - Unofficial headphones\n3 - Samsung headphones\n4 - External speaker\n");
+            int selected = Int32.Parse(Console.ReadLine());
+
+            switch (selected) {
+                case 1:
+                    PlaybackDevice = Speaker;
+                    playbackDeviceName = speakerSystemName;
+                    break;
+                case 2:
+                    PlaybackDevice = new UnofficialHeadset(new RealSpeaker(0.2), new RealSpeaker(0.2), 50);
+                    playbackDeviceName = nameof(UnofficialHeadset);
+                    break;
+                case 3:
+                    PlaybackDevice = new SamsungHeadset(new RealSpeaker(0.5), new RealSpeaker(0.5), 20);
+                    playbackDeviceName = nameof(SamsungHeadset);
+                break;
+                case 4:
+                    PlaybackDevice = new ExternalSpeaker(new RealSpeaker(10), 20);
+                    playbackDeviceName = nameof(ExternalSpeaker);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();           
+            }
+            Console.Write($"{playbackDeviceName} playback selected\n Set playback to Mobile...\n");
+        }
+
+        public void Play(ISoundable sound) {
+            Console.WriteLine(" Play sound in Mobile:");
+            PlaybackDevice.Play(sound);
         }
     }
 }

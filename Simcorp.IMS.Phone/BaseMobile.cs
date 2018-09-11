@@ -24,16 +24,12 @@ namespace Simcorp.IMS.Phone {
             SimCard.GetSimCardInfo();
         }
 
-        private void FetchSound(IFetchSound sound) {
+        private void FetchSound(ISound sound) {
             Microphone.FetchSound(sound);
         }
 
-        private void ReproduceSound(IReproduceSound sound) {
-            Speaker.ReproduceSound(sound);
-        }
-        private void ReproduceSound(IReproduceSound sound1, IReproduceSound sound2)
-        {
-            Speaker.ReproduceSound(sound1, sound2);
+        private void ReproduceSound(ISoundable sound) {
+            Speaker.Play(sound);
         }
 
         private void Charge(double energy) {

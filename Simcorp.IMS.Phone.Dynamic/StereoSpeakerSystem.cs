@@ -1,24 +1,17 @@
 ﻿using System;
 
 namespace Simcorp.IMS.Phone.Speaker {
-    public class StereoSpeakerSystem : BaseSpeakerSystem {
-        private BaseSpeaker vSpeaker2;
+    public class StereoSpeakerSystem : BaseTwoSpeakersSystem, IPlay {
 
-        public BaseSpeaker Speaker2 {
-            get { return vSpeaker2; }
-            set { vSpeaker2 = value; }
-        }
+        public StereoSpeakerSystem(BaseSpeaker speaker1, BaseSpeaker speaker2, int curVolume) : base(speaker1, speaker2, curVolume) {}
 
-        public StereoSpeakerSystem(BaseSpeaker speaker1, BaseSpeaker speaker2, int curVolume) : base(speaker1, curVolume) { Speaker2 = speaker2; }
-
-        public override void ReproduceSound(IReproduceSound sound) {
-            Speaker1.ReproduceSound(sound);
-            Speaker2.ReproduceSound(sound);
-        }
-
-        public override void ReproduceSound(IReproduceSound sound1, IReproduceSound sound2) {
-            Speaker1.ReproduceSound(sound1);
-            Speaker2.ReproduceSound(sound2);
+        public override void Play(ISoundable sound) {
+            ///Sound should be splitted into 2 parts to make stereo effect.
+            ///In reality spliited sound will be different, so just imagine that they diifers:)
+            ISoundable[] sounds = SplitSound(sound);
+            System.Console.WriteLine($"{nameof(StereoSpeakerSystem)} sound");
+            Speaker1.Play(sounds[0]);
+            Speaker2.Play(sounds[1]);
         }
 
         public override string ToString() {
