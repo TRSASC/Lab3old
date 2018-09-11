@@ -54,6 +54,10 @@
       <Project>{9b2c3c46-2d9a-48d0-8e27-c9814ddd939f}</Project>
       <Name>Simcorp.IMS.Phone.Speaker</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Simcorp.IMS.Phone.Output\Simcorp.IMS.Phone.Output.csproj">
+      <Project>{1d9f634a-2469-433f-b7d6-c90b1d3a796c}</Project>
+      <Name>Simcorp.IMS.Phone.Output</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Simcorp.IMS.Phone\Simcorp.IMS.Phone.csproj">
       <Project>{22f79a80-fc00-4892-85fb-a5598d1b58b4}</Project>
       <Name>Simcorp.IMS.Phone</Name>

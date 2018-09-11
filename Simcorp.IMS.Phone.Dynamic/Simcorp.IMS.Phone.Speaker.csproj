@@ -54,6 +54,12 @@
     <Compile Include="Track.cs" />
     <Compile Include="UnofficialHeadset.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Simcorp.IMS.Phone.Output\Simcorp.IMS.Phone.Output.csproj">
+      <Project>{1d9f634a-2469-433f-b7d6-c90b1d3a796c}</Project>
+      <Name>Simcorp.IMS.Phone.Output</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,6 @@
-﻿namespace Simcorp.IMS.Phone.Speaker {
+﻿using Simcorp.IMS.Phone.Output;
+
+namespace Simcorp.IMS.Phone.Speaker {
     public abstract class BaseTwoSpeakersSystem : BaseSpeakerSystem, IPlay {
         private BaseSpeaker vSpeaker2;
 
@@ -7,7 +9,7 @@
             set { vSpeaker2 = value; }
         }
 
-        public BaseTwoSpeakersSystem(BaseSpeaker speaker1, BaseSpeaker speaker2, int curVolume) : base(speaker1, curVolume) { Speaker2 = speaker2; }
+        public BaseTwoSpeakersSystem(BaseSpeaker speaker1, BaseSpeaker speaker2, int curVolume, IOutput output) : base(speaker1, curVolume, output) { Speaker2 = speaker2; }
 
         public static ISoundable[] SplitSound(ISoundable sound) {
             ISoundable[] res = new ISoundable[2];
