@@ -31,9 +31,10 @@ namespace Simcorp.IMS.Phone {
         public override BaseSimCardSlot SimCard { get { return vSimCard; } }
         public VideoCamera MainCamera { get { return vMainCamera; } }
         public VideoCamera FrontalCamera { get { return vFrontalCamera; } }
-        public string SpeakerName { get { return vSpeakerName; } }
-        public string PlaybackDeviceName { get; set; }
-        public IOutput Output { get; set; }
+        public override string SpeakerName { get { return vSpeakerName; } }
+        public override IPlay PlaybackDevice { get; set; }
+        public override string PlaybackDeviceName { get; set; }
+        public override IOutput Output { get; set; }
         
 
         private void MakePhoto(IView view) {
@@ -68,7 +69,6 @@ namespace Simcorp.IMS.Phone {
             return descriptionBuilder.ToString();
         }
 
-        public IPlay PlaybackDevice { get; set; }
         public void SetPlaybackDevice() {
             Console.Write("Select playback device:\n1 - Phone speakers\n2 - Unofficial headphones\n3 - Samsung headphones\n4 - External speaker\n");
             int selected = Int32.Parse(Console.ReadLine());
@@ -96,7 +96,7 @@ namespace Simcorp.IMS.Phone {
             Console.Write($"{PlaybackDeviceName} playback selected\n Set playback to Mobile...\n");
         }
 
-        public void Play(ISoundable sound) {
+        public override void Play(ISoundable sound) {
             Output.Write("Play sound in Mobile" + Environment.NewLine);
             PlaybackDevice.Play(sound);
         }

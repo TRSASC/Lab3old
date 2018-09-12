@@ -5,6 +5,7 @@ using Simcorp.IMS.Phone.Microphone;
 using Simcorp.IMS.Phone.Screen;
 using Simcorp.IMS.Phone.SimCard;
 using System.Text;
+using Simcorp.IMS.Phone.Output;
 
 namespace Simcorp.IMS.Phone {
     public abstract class BaseMobile {
@@ -15,6 +16,12 @@ namespace Simcorp.IMS.Phone {
         public abstract BaseMicrophone Microphone { get; }
         public abstract BaseScreen Screen { get; }
         public abstract BaseSimCardSlot SimCard { get; }
+        public abstract string SpeakerName { get; }
+        public abstract IPlay PlaybackDevice { get; set; }
+        public abstract string PlaybackDeviceName { get; set; }
+        public abstract IOutput Output { get; set; }
+
+
 
         private void Show(IScreenable screenImage) {
             Screen.Show(screenImage);
@@ -51,5 +58,7 @@ namespace Simcorp.IMS.Phone {
             descriptionBuilder.AppendLine($"{Screen.ToString()}");
             return descriptionBuilder.ToString();
         }
+
+        public abstract void Play(ISoundable sound);
     }
 }

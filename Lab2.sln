@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simcorp.IMS.Phone.Output", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobila", "Mobila\Mobila.csproj", "{2064DF49-9048-4700-BD3F-E4D80E076DE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{06AEDEEC-BFB0-4353-90ED-8C0AC9D3F7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPlayTest", "IPlayTest\IPlayTest.csproj", "{DD9D7136-0970-44A9-8037-AA8F1626C567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,8 +79,15 @@ Global
 		{2064DF49-9048-4700-BD3F-E4D80E076DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2064DF49-9048-4700-BD3F-E4D80E076DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2064DF49-9048-4700-BD3F-E4D80E076DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9D7136-0970-44A9-8037-AA8F1626C567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9D7136-0970-44A9-8037-AA8F1626C567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9D7136-0970-44A9-8037-AA8F1626C567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9D7136-0970-44A9-8037-AA8F1626C567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD9D7136-0970-44A9-8037-AA8F1626C567} = {06AEDEEC-BFB0-4353-90ED-8C0AC9D3F7A3}
 	EndGlobalSection
 EndGlobal
