@@ -1,88 +1,53 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Simcorp.IMS.Phone.Speaker;
-using Simcorp.IMS.Phone.Output;
 
 namespace IPlayTest {
     [TestClass]
     public class IPlayTest {
-        [TestMethod]
-        public void PlayStereoSpeakerSystemTest() {
-            //-- Arrange
-            FakeOutput output = new FakeOutput();
-
-            StereoSpeakerSystem device = new StereoSpeakerSystem(new RealSpeaker(2), new RealSpeaker(2), 20, output);
-            string ExpectedString = $"{nameof(StereoSpeakerSystem)} sound";
-
+        private void IPlayBaseTest(IPlay device, string expectedResult, FakeOutput output) {
             //-- Act
-
             device.Play(new Track());
 
             //-- Assert
-            Assert.AreEqual(output.Result, ExpectedString);
+            Assert.AreEqual(output.Result, expectedResult);
         }
 
         [TestMethod]
-        public void PlayMonauralSpeakerSystemTest() {
-            //-- Arrange
-            FakeOutput output = new FakeOutput();
+        public void IPlayUnitTest() {
+            FakeOutput output;
+            IPlay device;
+            string expectedMessage;
 
-            MonauralSpeakerSystem device = new MonauralSpeakerSystem(new RealSpeaker(2), 20, output);
-            string ExpectedString = $"{nameof(MonauralSpeakerSystem)} sound";
+            ///MonauralSpeaker Test
+            output = new FakeOutput();
+            device = new MonauralSpeakerSystem(new RealSpeaker(2), 20, output);
+            expectedMessage = $"{nameof(MonauralSpeakerSystem)} sound";
+            IPlayBaseTest(device, expectedMessage, output);
 
-            //-- Act
+            ///StereoSpeaker Test
+            output = new FakeOutput();
+            device = new StereoSpeakerSystem(new RealSpeaker(2), new RealSpeaker(2), 20, output);
+            expectedMessage = $"{nameof(StereoSpeakerSystem)} sound";
+            IPlayBaseTest(device, expectedMessage, output);
 
-            device.Play(new Track());
+            ///UnofficialHeadset Test
+            output = new FakeOutput();
+            device = new UnofficialHeadset(new RealSpeaker(2), new RealSpeaker(2), 20, output);
+            expectedMessage = $"{nameof(UnofficialHeadset)} sound";
+            IPlayBaseTest(device, expectedMessage, output);
 
-            //-- Assert
-            Assert.AreEqual(output.Result, ExpectedString);
+            ///SamsungHeadset Test
+            output = new FakeOutput();
+            device = new SamsungHeadset(new RealSpeaker(2), new RealSpeaker(2), 20, output);
+            expectedMessage = $"{nameof(SamsungHeadset)} sound";
+            IPlayBaseTest(device, expectedMessage, output);
+
+            ///ExternalSpeaker Test
+            output = new FakeOutput();
+            device = new ExternalSpeaker(new RealSpeaker(2), 20, output);
+            expectedMessage = $"{nameof(ExternalSpeaker)} sound";
+            IPlayBaseTest(device, expectedMessage, output);
         }
 
-        [TestMethod]
-        public void PlayUnofficialHeadsetTest() {
-            //-- Arrange
-            FakeOutput output = new FakeOutput();
-
-            UnofficialHeadset device = new UnofficialHeadset(new RealSpeaker(2), new RealSpeaker(2), 20, output);
-            string ExpectedString = $"{nameof(UnofficialHeadset)} sound";
-
-            //-- Act
-
-            device.Play(new Track());
-
-            //-- Assert
-            Assert.AreEqual(output.Result, ExpectedString);
-        }
-
-        [TestMethod]
-        public void PlaySamsungHeadsetTest() {
-            //-- Arrange
-            FakeOutput output = new FakeOutput();
-
-            SamsungHeadset device = new SamsungHeadset(new RealSpeaker(2), new RealSpeaker(2), 20, output);
-            string ExpectedString = $"{nameof(SamsungHeadset)} sound";
-
-            //-- Act
-
-            device.Play(new Track());
-
-            //-- Assert
-            Assert.AreEqual(output.Result, ExpectedString);
-        }
-
-        [TestMethod]
-        public void PlayExternalSpeakerTest() {
-            //-- Arrange
-            FakeOutput output = new FakeOutput();
-
-            ExternalSpeaker device = new ExternalSpeaker(new RealSpeaker(2), 20, output);
-            string ExpectedString = $"{nameof(ExternalSpeaker)} sound";
-
-            //-- Act
-
-            device.Play(new Track());
-
-            //-- Assert
-            Assert.AreEqual(output.Result, ExpectedString);
-        }
     }
 }
