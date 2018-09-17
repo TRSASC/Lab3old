@@ -13,39 +13,43 @@ namespace Mobila {
 
         public PhoneForm() {
             InitializeComponent();
-            simCorp = new SimCorpMobile(new TextBoxOutput(textBox1));
+            simCorp = new SimCorpMobile(new TextBoxOutput(PlayTextBox));
             simCorp.PlaybackDevice = simCorp.Speaker;
-            unofficialHeadset = new UnofficialHeadset(new RealSpeaker(0.2), new RealSpeaker(0.2), 50, new TextBoxOutput(textBox1));
-            samsungHeadset = new SamsungHeadset(new RealSpeaker(0.5), new RealSpeaker(0.5), 20, new TextBoxOutput(textBox1));
-            externalSpeaker = new ExternalSpeaker(new RealSpeaker(10), 20, new TextBoxOutput(textBox1));
+            unofficialHeadset = new UnofficialHeadset(new RealSpeaker(0.2), new RealSpeaker(0.2), 50, new TextBoxOutput(PlayTextBox));
+            samsungHeadset = new SamsungHeadset(new RealSpeaker(0.5), new RealSpeaker(0.5), 20, new TextBoxOutput(PlayTextBox));
+            externalSpeaker = new ExternalSpeaker(new RealSpeaker(10), 20, new TextBoxOutput(PlayTextBox));
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) {
+        private void Speaker_CheckedChanged(object sender, EventArgs e) {
             simCorp.PlaybackDevice = simCorp.Speaker;
+            if (!Speaker.Checked) { return; }
             simCorp.PlaybackDeviceName = simCorp.SpeakerName;
-            textBox1.AppendText(SelectionMsg(simCorp));
+            PlayTextBox.AppendText(SelectionMsg(simCorp));
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) {
+        private void UnoffHeadset_CheckedChanged(object sender, EventArgs e) {
             simCorp.PlaybackDevice = unofficialHeadset;
+            if (!UnoffHeadset.Checked) { return; }
             simCorp.PlaybackDeviceName = $"{nameof(UnofficialHeadset)}";
-            textBox1.AppendText(SelectionMsg(simCorp));
+            PlayTextBox.AppendText(SelectionMsg(simCorp));
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) {
+        private void SamsHeadset_CheckedChanged(object sender, EventArgs e) {
             simCorp.PlaybackDevice = samsungHeadset;
+            if (!SamsHeadset.Checked) { return; }
             simCorp.PlaybackDeviceName = $"{nameof(SamsungHeadset)}";
-            textBox1.AppendText(SelectionMsg(simCorp));
+            PlayTextBox.AppendText(SelectionMsg(simCorp));
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e) {
+        private void ExtSpeaker_CheckedChanged(object sender, EventArgs e) {
             simCorp.PlaybackDevice = externalSpeaker;
+            if (!ExtSpeaker.Checked) { return; }
             simCorp.PlaybackDeviceName = $"{nameof(ExternalSpeaker)}";
-            textBox1.AppendText(SelectionMsg(simCorp));
+            PlayTextBox.AppendText(SelectionMsg(simCorp));
         }
 
         private void buttonPlay_Click(object sender, EventArgs e) {
-            textBox1.AppendText("Set playback to Mobile" + Environment.NewLine);
+            PlayTextBox.AppendText("Set playback to Mobile" + Environment.NewLine);
             simCorp.Play(new Track());
         }
 
