@@ -59,6 +59,7 @@ namespace Simcorp.IMS.Phone {
             vScreen = new OLEDScreen(1280, 720, 280);
             vMainCamera = new VideoCamera("Main", 13, true, true);
             vFrontalCamera = new VideoCamera("Frontal", 5, true, true);
+            SMSProvider = new SMSProvider();
         }
 
         public override string GetDescription() {

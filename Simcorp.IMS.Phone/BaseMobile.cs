@@ -20,8 +20,7 @@ namespace Simcorp.IMS.Phone {
         public abstract IPlay PlaybackDevice { get; set; }
         public abstract string PlaybackDeviceName { get; set; }
         public abstract IOutput Output { get; set; }
-
-
+        public SMSProvider SMSProvider { get; set; }
 
         private void Show(IScreenable screenImage) {
             Screen.Show(screenImage);

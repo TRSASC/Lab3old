@@ -23,63 +23,63 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.Speaker = new System.Windows.Forms.RadioButton();
+            this.UnoffHeadset = new System.Windows.Forms.RadioButton();
+            this.SamsHeadset = new System.Windows.Forms.RadioButton();
+            this.ExtSpeaker = new System.Windows.Forms.RadioButton();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.PlaybackPanel = new System.Windows.Forms.Panel();
+            this.PlayTextBox = new System.Windows.Forms.TextBox();
+            this.PlaybackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // Speaker
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 7);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Speaker";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.Speaker.AutoSize = true;
+            this.Speaker.Location = new System.Drawing.Point(12, 7);
+            this.Speaker.Name = "Speaker";
+            this.Speaker.Size = new System.Drawing.Size(65, 17);
+            this.Speaker.TabIndex = 0;
+            this.Speaker.TabStop = true;
+            this.Speaker.Text = "Speaker";
+            this.Speaker.UseVisualStyleBackColor = true;
+            this.Speaker.CheckedChanged += new System.EventHandler(this.Speaker_CheckedChanged);
             // 
-            // radioButton2
+            // UnoffHeadset
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 37);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Unofficial headset";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.UnoffHeadset.AutoSize = true;
+            this.UnoffHeadset.Location = new System.Drawing.Point(12, 37);
+            this.UnoffHeadset.Name = "UnoffHeadset";
+            this.UnoffHeadset.Size = new System.Drawing.Size(110, 17);
+            this.UnoffHeadset.TabIndex = 1;
+            this.UnoffHeadset.TabStop = true;
+            this.UnoffHeadset.Text = "Unofficial headset";
+            this.UnoffHeadset.UseVisualStyleBackColor = true;
+            this.UnoffHeadset.CheckedChanged += new System.EventHandler(this.UnoffHeadset_CheckedChanged);
             // 
-            // radioButton3
+            // SamsHeadset
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(12, 67);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(110, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Samsung headset";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.SamsHeadset.AutoSize = true;
+            this.SamsHeadset.Location = new System.Drawing.Point(12, 67);
+            this.SamsHeadset.Name = "SamsHeadset";
+            this.SamsHeadset.Size = new System.Drawing.Size(110, 17);
+            this.SamsHeadset.TabIndex = 2;
+            this.SamsHeadset.TabStop = true;
+            this.SamsHeadset.Text = "Samsung headset";
+            this.SamsHeadset.UseVisualStyleBackColor = true;
+            this.SamsHeadset.CheckedChanged += new System.EventHandler(this.SamsHeadset_CheckedChanged);
             // 
-            // radioButton4
+            // ExtSpeaker
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(12, 97);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(104, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "External speaker";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.ExtSpeaker.AutoSize = true;
+            this.ExtSpeaker.Location = new System.Drawing.Point(12, 97);
+            this.ExtSpeaker.Name = "ExtSpeaker";
+            this.ExtSpeaker.Size = new System.Drawing.Size(104, 17);
+            this.ExtSpeaker.TabIndex = 3;
+            this.ExtSpeaker.TabStop = true;
+            this.ExtSpeaker.Text = "External speaker";
+            this.ExtSpeaker.UseVisualStyleBackColor = true;
+            this.ExtSpeaker.CheckedChanged += new System.EventHandler(this.ExtSpeaker_CheckedChanged);
             // 
             // buttonPlay
             // 
@@ -92,37 +92,42 @@
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
-            // panel1
+            // PlaybackPanel
             // 
-            this.panel1.Controls.Add(this.radioButton4);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(20, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 120);
-            this.panel1.TabIndex = 5;
+            this.PlaybackPanel.Controls.Add(this.ExtSpeaker);
+            this.PlaybackPanel.Controls.Add(this.SamsHeadset);
+            this.PlaybackPanel.Controls.Add(this.UnoffHeadset);
+            this.PlaybackPanel.Controls.Add(this.Speaker);
+            this.PlaybackPanel.Location = new System.Drawing.Point(20, 20);
+            this.PlaybackPanel.Name = "PlaybackPanel";
+            this.PlaybackPanel.Size = new System.Drawing.Size(170, 120);
+            this.PlaybackPanel.TabIndex = 5;
             // 
-            // textBox1
+            // PlayTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 180);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 240);
-            this.textBox1.TabIndex = 6;
+            this.PlayTextBox.Location = new System.Drawing.Point(20, 180);
+            this.PlayTextBox.Multiline = true;
+            this.PlayTextBox.Name = "PlayTextBox";
+            this.PlayTextBox.Size = new System.Drawing.Size(240, 240);
+            this.PlayTextBox.TabIndex = 6;
             // 
             // PhoneForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 461);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PlayTextBox);
+            this.Controls.Add(this.PlaybackPanel);
             this.Controls.Add(this.buttonPlay);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 500);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 500);
             this.Name = "PhoneForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phone";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PlaybackPanel.ResumeLayout(false);
+            this.PlaybackPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,13 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton Speaker;
+        private System.Windows.Forms.RadioButton UnoffHeadset;
+        private System.Windows.Forms.RadioButton SamsHeadset;
+        private System.Windows.Forms.RadioButton ExtSpeaker;
         private System.Windows.Forms.Button buttonPlay;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel PlaybackPanel;
+        private System.Windows.Forms.TextBox PlayTextBox;
     }
 }
 
